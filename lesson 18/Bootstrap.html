@@ -1,0 +1,306 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inspiring Quotes</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+/* Navbar */
+.navbar{
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+}
+
+.nav-link{
+    color:white !important;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#38bdf8 !important;
+}
+
+/* Hero Section */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#cbd5e1;
+}
+
+/* Carousel */
+.carousel-section{
+    padding:80px 20px;
+}
+
+.quote-card{
+    max-width:800px;
+    margin:auto;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius:20px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.quote-card h2{
+    font-size:2rem;
+    color:#38bdf8;
+}
+
+.quote-card p{
+    font-size:1.3rem;
+    margin-top:20px;
+}
+
+.quote-card span{
+    color:#facc15;
+    font-weight:bold;
+}
+
+/* About Section */
+.about{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.about h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+/* Footer */
+footer{
+    background:#020617;
+    padding:50px 20px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+footer h5{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+    padding:0;
+}
+
+footer ul li{
+    margin-bottom:8px;
+}
+
+footer ul li a{
+    color:#cbd5e1;
+    text-decoration:none;
+}
+
+footer ul li a:hover{
+    color:#38bdf8;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid #334155;
+    margin-top:30px;
+    padding-top:20px;
+    color:#94a3b8;
+}
+</style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand text-white fw-bold" href="#">QuotesHub</a>
+
+<button class="navbar-toggler bg-light" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#quotes">Quotes</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Home -->
+<section id="home" class="hero">
+<div>
+<h1>✨ Inspiring Quotes</h1>
+<p>Words that motivate, inspire and empower you every day.</p>
+</div>
+</section>
+
+<!-- Quotes Carousel -->
+<section id="quotes" class="carousel-section">
+
+<div id="quoteCarousel" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#quoteCarousel"
+data-bs-slide-to="0" class="active"></button>
+
+<button type="button" data-bs-target="#quoteCarousel"
+data-bs-slide-to="1"></button>
+
+<button type="button" data-bs-target="#quoteCarousel"
+data-bs-slide-to="2"></button>
+</div>
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<div class="quote-card">
+<h2>Quote 1</h2>
+<p>"Success is not final, failure is not fatal:
+it is the courage to continue that counts."</p>
+<span>- Winston Churchill</span>
+</div>
+</div>
+
+<div class="carousel-item">
+<div class="quote-card">
+<h2>Quote 2</h2>
+<p>"The future belongs to those who believe in
+the beauty of their dreams."</p>
+<span>- Eleanor Roosevelt</span>
+</div>
+</div>
+
+<div class="carousel-item">
+<div class="quote-card">
+<h2>Quote 3</h2>
+<p>"Do not watch the clock;
+do what it does. Keep going."</p>
+<span>- Sam Levenson</span>
+</div>
+</div>
+
+</div>
+
+<button class="carousel-control-prev"
+type="button"
+data-bs-target="#quoteCarousel"
+data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next"
+type="button"
+data-bs-target="#quoteCarousel"
+data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+</section>
+
+<!-- About -->
+<section id="about" class="about">
+<div class="container">
+<h2>About This Page</h2>
+<p>
+This page is designed by Eugene Rowland Kpakpo Acquaye using HTML, CSS, and Bootstrap.
+</p>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+
+<div class="footer-container">
+
+<div>
+<h5>QuotesHub</h5>
+<p>
+Daily inspiration and motivation through carefully selected quotes.
+</p>
+</div>
+
+<div>
+<h5>Quick Links</h5>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#quotes">Quotes</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+</div>
+
+<div>
+<h5>Contact</h5>
+<ul>
+<li>Email: info@quoteshub.com</li>
+<li>Phone: +233 000 000 000</li>
+<li>Accra, Ghana</li>
+</ul>
+</div>
+
+<div>
+<h5>Follow Us</h5>
+<ul>
+<li><a href="#">Facebook</a></li>
+<li><a href="#">Instagram</a></li>
+<li><a href="#">Twitter</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 QuotesHub. All Rights Reserved.
+</div>
+
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+```
